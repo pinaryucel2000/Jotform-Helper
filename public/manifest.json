@@ -1,0 +1,34 @@
+{
+  "name": "Jotform Helper",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "messages.js",
+        "constants.js",
+        "utils.js",
+        "rules.js",
+        "content.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "./popup.html",
+    "default_title": "Jotform Helper"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "options_page": "./index.html",
+  "permissions": ["tabs", "*://*/*", "storage", "alarms"],
+  "content_security_policy": "script-src 'self' https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js; object-src 'self'"
+}

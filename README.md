@@ -1,0 +1,1 @@
+# Jotform Helper Extension

@@ -1,0 +1,14 @@
+.aaa {
+  text-align: center;
+  float: left;
+  margin-top: 42px;
+}
+
+.bbb {
+  float: right;
+  width: 150%;
+}
+
+.container {
+  display: flex;
+}
